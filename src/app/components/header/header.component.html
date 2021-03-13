@@ -1,9 +1,9 @@
 <mat-toolbar>
     <span>Covid Tracker</span>
-    <button mat-icon-button class="home-btn">
+     <button mat-icon-button class="home-btn" [routerLink]="['/']">
       Home
-    </button>
-    <button mat-icon-button class="count-btn">
+    </button> 
+    <button mat-icon-button class="count-btn" [routerLink]="['/countries']">
       Countries
   </button>
 </mat-toolbar>
