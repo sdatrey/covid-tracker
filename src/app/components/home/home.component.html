@@ -1,8 +1,22 @@
 <div class="jumbotron text-center">
-        <h1 class="display-4">Covid-19 Tracker</h1>
+        <h1 class="display-4">Covid-19 Cases Tracker</h1>
         <hr>
-        <p class="lead">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+        <div class="row">
+            <mat-card class="card col p-3 m-3">
+                <mat-card-title>Confirmed</mat-card-title>
+                <mat-card-subtitle>{{totalConfirmed}}</mat-card-subtitle>
+            </mat-card>
+            <mat-card class="card col p-3 m-3">
+                <mat-card-title>Active</mat-card-title>
+                <mat-card-subtitle>{{totalActive}}</mat-card-subtitle>
+            </mat-card>
+            <mat-card class="card col p-3 m-3">
+                <mat-card-title>Deaths</mat-card-title>
+                <mat-card-subtitle>{{totalDeaths}}</mat-card-subtitle>
+            </mat-card>
+            <mat-card class="card col p-3 m-3">
+                <mat-card-title>Recovered</mat-card-title>
+                <mat-card-subtitle>{{totalRecovered}}</mat-card-subtitle>
+            </mat-card>
+        </div>
 </div>
