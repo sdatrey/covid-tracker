@@ -1,22 +1,5 @@
-<div class="jumbotron text-center">
+<div class="jumbotron bg-whtie text-center">
         <h1 class="display-4">Covid-19 Cases Tracker</h1>
         <hr>
-        <div class="row">
-            <mat-card class="card col p-3 m-3">
-                <mat-card-title>Confirmed</mat-card-title>
-                <mat-card-subtitle>{{totalConfirmed}}</mat-card-subtitle>
-            </mat-card>
-            <mat-card class="card col p-3 m-3">
-                <mat-card-title>Active</mat-card-title>
-                <mat-card-subtitle>{{totalActive}}</mat-card-subtitle>
-            </mat-card>
-            <mat-card class="card col p-3 m-3">
-                <mat-card-title>Deaths</mat-card-title>
-                <mat-card-subtitle>{{totalDeaths}}</mat-card-subtitle>
-            </mat-card>
-            <mat-card class="card col p-3 m-3">
-                <mat-card-title>Recovered</mat-card-title>
-                <mat-card-subtitle>{{totalRecovered}}</mat-card-subtitle>
-            </mat-card>
-        </div>
+        <app-dashboard [totalConfirmed] = 'totalConfirmed' [totalActive]='totalActive' [totalDeaths]='totalDeaths' [totalRecovered]='totalRecovered'></app-dashboard>
 </div>

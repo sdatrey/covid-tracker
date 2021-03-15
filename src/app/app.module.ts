@@ -9,13 +9,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CountriesComponent } from './components/countries/countries.component';
 import {MatCardModule} from '@angular/material/card';
 import {HttpClientModule} from '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    CountriesComponent
+    CountriesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,9 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

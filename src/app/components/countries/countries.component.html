@@ -1,1 +1,12 @@
-<p>countries works!</p>
+<div class="jumbotron">
+    <div class="container">
+    <h1 class="display-3 text-center">Corona Cases Country Wise</h1>
+    <hr class="my-2">
+    <mat-form-field appearance="fill" class="selector">
+    <mat-label>Select Country</mat-label>
+    <mat-select >
+    <mat-option value="con" *ngFor="let con of countries">{{con}}</mat-option>
+    </mat-select>
+    </mat-form-field>
+    </div>
+</div>
