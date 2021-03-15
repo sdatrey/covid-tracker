@@ -9,6 +9,7 @@ import { DataServiceService } from 'src/app/services/data-service.service';
 })
 export class HomeComponent implements OnInit {
 
+  
   totalConfirmed = 0;
   totalActive = 0;
   totalDeaths = 0;
@@ -19,7 +20,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.dataservice.getGlobalData().subscribe({
       next: (data) => {
-        console.log(data)
         this.globalData = data;
         data.forEach(cs => {
           if(!Number.isNaN(cs.confirmed)){
