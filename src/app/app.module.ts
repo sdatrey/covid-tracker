@@ -11,6 +11,7 @@ import { CountriesComponent } from './components/countries/countries.component';
 import {MatCardModule} from '@angular/material/card';
 import {HttpClientModule} from '@angular/common/http';
 import {MatSelectModule} from '@angular/material/select';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
@@ -32,6 +33,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatCardModule,
     HttpClientModule,
     MatSelectModule,
+    Ng2GoogleChartsModule,
     MatFormFieldModule,
   ],
   providers: [],

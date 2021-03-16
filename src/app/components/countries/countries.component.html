@@ -1,14 +1,14 @@
 <div class="jumbotron">
     <div class="container">
     <h1 class="display-3 text-center">Corona Cases Country Wise</h1>
-    <hr class="my-2">
+    <hr>
     <!-- <mat-form-field appearance="fill" class="selector">
     <mat-label>Select Country</mat-label>
     <mat-select #input (change)="updatedValue(input.value)" >
     <mat-option  *ngFor="let con of countries" value="con">{{con}}</mat-option>
     </mat-select>
     </mat-form-field> -->
-    <select name="country-select" class="form-control"  id="c" #input (change)="updatedValue(input.value)">
+    <select name="country-select" class="form-control selector"  id="c" #input (change)="updatedValue(input.value)">
         <option *ngFor="let con of countries"  value="{{con}}">{{con}}</option>
     </select>
     <app-dashboard [totalConfirmed] = 'totalConfirmed' [totalActive]='totalActive' [totalDeaths]='totalDeaths' [totalRecovered]='totalRecovered'></app-dashboard>
