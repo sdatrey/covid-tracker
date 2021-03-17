@@ -14,6 +14,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatSelectModule,
     Ng2GoogleChartsModule,
     MatFormFieldModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

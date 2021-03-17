@@ -9,9 +9,8 @@ import { GoogleChartInterface } from 'ng2-google-charts';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-   
-
+  caseType: string;
+  cases: string[] = ['Active', 'Confirmed', 'Recovered', 'Deaths'];
   totalConfirmed = 0;
   totalActive = 0;
   totalDeaths = 0;
@@ -25,13 +24,25 @@ export class HomeComponent implements OnInit {
     chartType:'ColumnChart'
   }
 
-  initChart(): void {
+  initChart(caseType: string): void {
     let dataTable = [];
     dataTable.push(['Country', 'Cases'])
     this.globalData.forEach(cs => {
-      if(cs.confirmed > 1000000)
+      let value: number;
+      if(caseType === "Active"){
+        value = cs.active
+      }
+      if(caseType === "Recovered"){
+        value = cs.recovered
+      }
+      if(caseType === "Confirmed"){
+        value = cs.confirmed
+      }
+      if(caseType === "Deaths"){
+        value = cs.deaths
+      }
       dataTable.push([
-        cs.country, cs.confirmed
+        cs.country, value
       ])
     })
     this.pieChart = {
@@ -65,9 +76,13 @@ export class HomeComponent implements OnInit {
           }
 
         })
-        this.initChart();
+        this.initChart("Confirmed");
       }
     })
+  }
+  updateChart(value: string){
+    this.initChart(value);
+    
   }
 
 }
